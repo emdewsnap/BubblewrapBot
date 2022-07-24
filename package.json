@@ -1,0 +1,29 @@
+{
+  "name": "uwuizer",
+  "version": "1.0.0",
+  "description": "uwu bot for discord",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emdewsnap/UwUizer.git"
+  },
+  "keywords": [
+    "uwu",
+    "discord",
+    "bot"
+  ],
+  "author": "Dewsnap",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emdewsnap/UwUizer/issues"
+  },
+  "homepage": "https://github.com/emdewsnap/UwUizer#readme"
+}
