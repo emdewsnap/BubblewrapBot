@@ -1,13 +1,19 @@
 const Discord = require('discord.js');
 require('dotenv').config();
-const client = new Discord.Client();
-const PREFIX = 'bw!'
+const client = new Discord.Client({
+  intents: [
+    Discord.IntentsBitField.Flags.Guilds,
+    Discord.IntentsBitField.Flags.GuildMessages,
+    Discord.IntentsBitField.Flags.MessageContent
+  ]
+});
+const PREFIX = 'bw!';
 client.on('ready', () => {
- console.log(`Logged in as ${client.user.tag}!`);
- client.user.setGame("Type bw!help");
- });
+  console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setActivity("Type bw!help");
+});
 
-client.on('message', msg => {
+client.on('messageCreate', msg => {
     if (msg.content.startsWith(PREFIX)) {
         let commandTxt = msg.content.substring(3);
         if(commandTxt == 'help'){
